@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <title>UNIVERSAL</title>
+        <body>
+            <script>
+                var NumeroVentas,a=0,b=0,c=0,i=0;
+                var ValorVenta,Valor_a=0,Valor_b=0,Valor_c=0;
+                NumeroVentas=parseInt(prompt("Ingrese el numero de ventas del dia:"));
+                while(i!=NumeroVentas){
+			              i=i+1;
+                    ValorVenta=parseFloat(prompt("Ingrese el valor de la venta "+i+" del dia:"));  
+                    if(ValorVenta > 1000){
+                        a++;
+                        Valor_a=Valor_a+ValorVenta;
+                    }else if(ValorVenta > 500){
+                        b++;
+                        Valor_b=Valor_b+ValorVenta;
+                    }else{
+                        c++;
+                        Valor_c=Valor_c+ValorVenta;
+                    }
+		            }
+                ValorVenta = Valor_a+Valor_b+Valor_c;
+                alert("El numero de ventas del dia fue: "+NumeroVentas+"\n\n Numero de ventas mayores a $1000: "+a+"\nCon un monto acumulado de: "+Valor_a+"$\n\n Numero de ventas menores a $1000, pero mayores a $500: "+b+"\nCon un monto acumulado de: "+Valor_b+"$\n\nNumero de menores o iguales a $500: "+c+"\nCon un monto acumulado de: "+Valor_c+"$\n\nMonto total acumulado del dia: "+ValorVenta+"$");
+            </script>
+        </body>
+    </head>    
+</html>
